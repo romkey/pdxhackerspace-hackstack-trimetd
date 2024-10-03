@@ -1,3 +1,6 @@
 source "https://rubygems.org"
 
 gem 'dotenv'
+gem 'mqtt'
+gem 'ostruct'
+gem 'logger'

@@ -1,0 +1,16 @@
+services:
+  trimetd:
+    build:
+      context: .
+# for development, uncomment this line and run docker compose run /bin/sh
+#      dockerfile: Dockerfile.dev
+    container_name: trimetd
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - mosquitto
+networks:
+  mosquitto:
+    name: mosquitto-net
+    external: true
